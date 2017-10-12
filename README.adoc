@@ -1,3 +1,34 @@
 = dnrdrhc
 
-== dnrdrhc
+*dnrdrhc* (read it as *blood donors check* in english, or *donor darah cek* in Indonesia) is a blood donor reminder which will always reminds you when your blood donor time is coming while you work on the desktop.
+
+In Indonesia, according to Peraturan Menteri Kesehatan 91 tahun 2015, people can donor their blood (Whole Blood) once in 60 days, so this tool uses this rule, although you can change it easily (e.g. if it still use old rule once in 75 days).
+
+== Dependencies
+
+* Bash (I want to remove this bashism actually)
+* libnotify
+
+== How it works?
+
+dnrdrhc reads database-like txt contains date in Indonesian form which has format:
+
+----
+<donor time> <day> <month> <years>
+----
+
+example:
+
+----
+1 21 September 2015
+2 30 November 2015
+so on
+----
+
+In this initial release, _donor time_ isn't useful enough. I just love write it to remind me when I'm not in desktop.
+
+You can edit this database with your favorite editor or `echo` command.
+
+dnrdrhc will works as your wish with cron (I put example cron command in cron dir that calls this tool every 3 hours in a day).
+
+Please enjoy!
