@@ -1,0 +1,43 @@
+#!/bin/bash
+
+LANG=id_ID
+DB="./db/tgl.txt"
+
+create_db(){
+sleep 1
+mkdir db
+cat > $DB <<-EOF
+		# Contoh penulisan tanggal donor
+		1 21 Juli 2000
+		2 23 September 2000
+		EOF
+}
+
+is_sixty_days_passed(){
+  if [ "$1" -ge "$2" ];
+  then
+    true
+  else
+    false
+  fi
+}
+
+notify_me(){
+  notify-send "$1" -a "$2" -t 5000
+}
+
+if [[ ! -r $DB ]]; then
+  create_db
+  echo "$DB created!"
+  exit 1
+fi
+
+last_donor_date=$(tail -1 $DB | awk '{ print $2 " " $3 " " $4 }')
+last_donor_date_tos=$(date -d "$last_donor_date" +%s)
+sixty_days_ago_tos=$(date --date="+10 days ago" +%s)
+
+if ( is_sixty_days_passed "$sixty_days_ago_tos" "$last_donor_date_tos" )
+then
+  notify_me "Waktunya donor darah! Terakhir donor: $last_donor_date" \
+    "Pesan dnrdrhc"
+fi
