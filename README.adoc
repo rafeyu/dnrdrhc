@@ -1,5 +1,7 @@
 = dnrdrhc
 
+image::http://rmdzn.kilatstorage.com/image/2017/10/13/dnrdrhc-ss-lnx.png[dnrdhc]
+
 *dnrdrhc* (read it as *blood donors check* in english, or *donor darah cek* in Indonesia) is a blood donor reminder which will always reminds you when your blood donor time is coming while you work on the desktop.
 
 In Indonesia, according to Peraturan Menteri Kesehatan 91 tahun 2015, people can donor their blood (Whole Blood) once in 60 days, so this tool uses this rule, although you can change it easily (e.g. if it still use old rule once in 75 days).

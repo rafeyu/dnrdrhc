@@ -1,5 +1,7 @@
 = dnrdrhc
 
+image::http://rmdzn.kilatstorage.com/image/2017/10/13/dnrdrhc-ss-lnx.png[dnrdhc]
+
 *dnrdrhc* (baca: *donor darah cek*) merupakan perkakas pengingat donor darah yang akan selalu mengingatkan Anda untuk donor darah jika waktunya sudah tiba.
 
 Di Indonesia, berdasarkan Peraturan Menteri Kesehatan 91 tahun 2015, masyarakat dapat mendonorkan darahnya (Whole Blood) 60 hari sekali, perkakas ini menggunakan peraturan itu, walaupun Anda dapat menggantinya dengan mudah (seperti jika PMI di daerah Anda masih menerapkan peraturan lawas 75 hari sekali).
