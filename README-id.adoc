@@ -1,0 +1,34 @@
+= dnrdrhc
+
+*dnrdrhc* (baca: *donor darah cek*) merupakan perkakas pengingat donor darah yang akan selalu mengingatkan Anda untuk donor darah jika waktunya sudah tiba.
+
+Di Indonesia, berdasarkan Peraturan Menteri Kesehatan 91 tahun 2015, masyarakat dapat mendonorkan darahnya (Whole Blood) 60 hari sekali, perkakas ini menggunakan peraturan itu, walaupun Anda dapat menggantinya dengan mudah (seperti jika PMI di daerah Anda masih menerapkan peraturan lawas 75 hari sekali).
+
+== Dependensi
+
+* Bash (sebenarnya saya ingin menghapus bashisme)
+* libnotify
+
+== Cara kerja
+
+dnrdrhc membaca berkas txt mirip basis data yang berisi tanggal dalam format Indonesia:
+
+----
+<jumlah donor> <tanggal> <bulan> <tahun>
+----
+
+contoh:
+
+----
+1 21 September 2015
+2 30 November 2015
+dst
+----
+
+Di rilis awal ini, _jumlah donor_ belum berperan penting. Saya hanya senang menuliskannya sebagai pengingat dikala tidak di depan desktop.
+
+Anda dapat menyunting basis data dengan editor favorit Anda atau hanya menggunakan perintah `echo`.
+
+dnrdrhc tepat dipakai dengan memanfaatkan cron (saya menyediakan contoh perintah cron di direktori cron yang akan menjalankan perkakas ini setiap 3 jam setiap hari).
+
+Silakan dinikmati!
