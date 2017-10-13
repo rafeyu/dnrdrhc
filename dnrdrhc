@@ -34,7 +34,7 @@ fi
 
 last_donor_date=$(tail -1 $DB | awk '{ print $2 " " $3 " " $4 }')
 last_donor_date_tos=$(date -d "$last_donor_date" +%s)
-sixty_days_ago_tos=$(date --date="+10 days ago" +%s)
+sixty_days_ago_tos=$(date --date="+60 days ago" +%s)
 
 if ( is_sixty_days_passed "$sixty_days_ago_tos" "$last_donor_date_tos" )
 then
